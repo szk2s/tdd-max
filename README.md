@@ -1,2 +1,2 @@
-# Jest-for-Max
-Testing Max patchers with a delightful JavaScript Testing Framework 
+# TD-Max
+Utility library which help Test Driven development in Cycling '74 Max
