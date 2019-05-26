@@ -9,9 +9,7 @@
   "scripts": {
     "format": "yarn prettier --write src/**/*.js index.js",
     "lint": "yarn eslint .",
-    "lint:fix": "yarn eslint . --fix",
-    "test": "jest",
-    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand --watch"
+    "lint:fix": "yarn eslint . --fix"
   },
   "dependencies": {
     "jest": "^24.8.0"
