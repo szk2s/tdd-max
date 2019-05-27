@@ -1,7 +1,7 @@
 {
-  "name": "jest-for-max",
+  "name": "tdd-max",
   "version": "1.0.0",
-  "description": "Testing Max patchers with a delightful JavaScript Testing Framework ",
+  "description": "Utility library which help Test Driven development in Cycling '74 Max",
   "main": "index.js",
   "repository": "https://github.com/szk2s/Jest-for-Max",
   "author": "szk2s <suzukisjss@gmail.com>",
