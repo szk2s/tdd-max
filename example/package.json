@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts": {
-    "test": "jest",
-    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand --watch"
-  },
-  "devDependencies": {
-    "jest": "^24.8.0"
+  "dependencies": {
+    "chai": "^4.2.0"
   }
 }
