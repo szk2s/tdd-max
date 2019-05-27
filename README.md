@@ -18,7 +18,7 @@
 ## Usage
 To use TDD-Max, you need to prepare two things, "test patcher" and "test code"
 ### Test patcher  
-You can make your test patcher as shown below. If you would like to use this as your template, this is accessible from the help patcher.
+You can make your test patcher as shown below. If you would like to use this as your template, this is accessible from the help patcher.  
 <img width="993" alt="Screen Shot 2019-05-28 at 1 37 50" src="https://user-images.githubusercontent.com/31060964/58431536-48e1be80-80e9-11e9-9463-e0abc1d4493d.png">  
 
 ### Test codes
@@ -43,6 +43,8 @@ Be careful that all your test codes should be named as `*.test.js`.
 In addition, you must place your test code in the same folder as your test patcher. Or, the subfolder can be used.
 `tdd` will search those folders and load your codes automatically even if you have multiple test files.  
   
+If you'd like to use some assertion library such as 'chai', please be aware those libraries should be installed to your project root, not to the folder where the `tdd` patcher is installed. Sending `npm install` message to `tdd` patcher will not work, so please use the command line.  
+
 If you are not familiar to `generator function`, please see the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*).
 ## PR is welcome!
-You can file issue, but PR is greatly appreciated. The code is simple enough to modify quickly.
+You can file an issue, but PR is greatly appreciated. The code is simple enough to modify quickly.
