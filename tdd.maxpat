@@ -97,14 +97,16 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 61.0, 267.0, 179.0, 22.0 ],
+					"patching_rect" : [ 61.0, 267.0, 185.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
-					"text" : "node.script td.main.js @watch 1"
+					"text" : "node.script tdd.main.js @watch 1"
 				}
 
 			}
@@ -141,7 +143,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 221.0, 395.0, 30.0, 30.0 ]
+					"patching_rect" : [ 227.0, 395.0, 30.0, 30.0 ]
 				}
 
 			}

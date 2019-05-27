@@ -61,7 +61,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 512.0, 102.0, 141.0, 66.0 ],
-					"presentation_linecount" : 6,
 					"text" : "See how you can write your test codes. Click this message!"
 				}
 
@@ -74,8 +73,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 512.0, 178.0, 435.0, 35.0 ],
-					"text" : ";\rmax launchbrowser https://github.com/spectral-lab/TD-Max/tree/master/example"
+					"patching_rect" : [ 512.0, 178.0, 443.0, 35.0 ],
+					"text" : ";\rmax launchbrowser https://github.com/spectral-lab/TDD-Max/tree/master/example"
 				}
 
 			}
@@ -87,7 +86,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 31.0, 85.0, 297.0, 24.0 ],
-					"presentation_linecount" : 5,
 					"text" : "Loads your test codes (ex: add1.test.js). "
 				}
 
@@ -100,7 +98,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 31.0, 22.0, 112.0, 51.0 ],
-					"text" : "td"
+					"text" : "tdd"
 				}
 
 			}
@@ -162,7 +160,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 70.0, 288.0, 496.0, 22.0 ],
-					"text" : "td"
+					"text" : "tdd"
 				}
 
 			}
@@ -250,7 +248,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 70.0, 438.0, 288.0, 33.0 ],
-					"text" : "These orange boxes are what you are developing. Click and try to change inside.",
+					"text" : "These orange boxes are what you are developing. Click and try changing inside.",
 					"textcolor" : [ 0.2, 0.2, 0.2, 1.0 ]
 				}
 
@@ -561,14 +559,14 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "td.maxpat",
+				"name" : "tdd.maxpat",
 				"bootpath" : "~/repos/TD-Max",
 				"patcherrelativepath" : "..",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "td.main.js",
+				"name" : "tdd.main.js",
 				"bootpath" : "~/repos/TD-Max",
 				"patcherrelativepath" : "..",
 				"type" : "TEXT",
