@@ -44,7 +44,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 61.0, 283.0, 86.0, 22.0 ],
+					"patching_rect" : [ 61.0, 328.0, 86.0, 22.0 ],
 					"text" : "route get_path"
 				}
 
@@ -56,7 +56,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 162.5, 175.5, 79.0, 22.0 ],
+					"patching_rect" : [ 162.5, 220.5, 79.0, 22.0 ],
 					"text" : "prepend path"
 				}
 
@@ -70,7 +70,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 104.5, 107.0, 32.0, 21.0 ],
+					"patching_rect" : [ 104.5, 152.0, 32.0, 21.0 ],
 					"text" : "path"
 				}
 
@@ -84,7 +84,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 104.5, 145.0, 77.0, 21.0 ],
+					"patching_rect" : [ 104.5, 190.0, 77.0, 21.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"text" : "thispatcher"
 				}
@@ -97,7 +97,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 61.0, 222.0, 179.0, 22.0 ],
+					"patching_rect" : [ 61.0, 267.0, 179.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
@@ -112,7 +112,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-26",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -125,7 +125,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-28",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -137,7 +137,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-29",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -149,7 +149,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-27", 0 ],
-					"midpoints" : [ 114.0, 142.0, 114.0, 142.0 ],
+					"midpoints" : [ 114.0, 187.0, 114.0, 187.0 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -192,7 +192,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
-					"midpoints" : [ 70.5, 315.0, 42.0, 315.0, 42.0, 83.0, 114.0, 83.0 ],
+					"midpoints" : [ 70.5, 360.0, 42.0, 360.0, 42.0, 128.0, 114.0, 128.0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -204,16 +204,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "td.main.js",
-				"bootpath" : "~/repos/TD-Max",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
