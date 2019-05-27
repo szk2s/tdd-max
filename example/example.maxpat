@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 78.0, 988.0, 788.0 ],
+		"rect" : [ 1474.0, -102.0, 1466.0, 968.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,12 +39,24 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-30",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 70.0, 123.0, 525.0, 22.0 ],
+					"text" : "td.main"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "dictionary" ],
-					"patching_rect" : [ 327.333333333333314, 290.0, 186.999999999999943, 22.0 ],
+					"patching_rect" : [ 327.333333333333314, 380.0, 186.999999999999943, 22.0 ],
 					"text" : "dict.pack 0: 1: @triggers 0 1"
 				}
 
@@ -56,7 +68,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 327.333333333333314, 326.0, 95.0, 22.0 ],
+					"patching_rect" : [ 327.333333333333314, 416.0, 95.0, 22.0 ],
 					"text" : "prepend classify"
 				}
 
@@ -69,7 +81,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 327.333333333333314, 228.0, 186.999999999999943, 22.0 ],
+					"patching_rect" : [ 327.333333333333314, 318.0, 186.999999999999943, 22.0 ],
 					"text" : "classify"
 				}
 
@@ -81,7 +93,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 189.0, 326.0, 79.0, 22.0 ],
+					"patching_rect" : [ 189.0, 416.0, 79.0, 22.0 ],
 					"text" : "prepend sum"
 				}
 
@@ -93,7 +105,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "float" ],
-					"patching_rect" : [ 189.0, 129.0, 61.0, 22.0 ],
+					"patching_rect" : [ 189.0, 219.0, 61.0, 22.0 ],
 					"text" : "unpack f f"
 				}
 
@@ -106,7 +118,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 189.0, 228.0, 47.0, 22.0 ],
+					"patching_rect" : [ 189.0, 318.0, 47.0, 22.0 ],
 					"text" : "sum"
 				}
 
@@ -120,7 +132,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 70.0, 183.0, 288.0, 33.0 ],
+					"patching_rect" : [ 70.0, 273.0, 288.0, 33.0 ],
 					"text" : "These orange boxes are what you are developing. Click and try to change inside.",
 					"textcolor" : [ 0.2, 0.2, 0.2, 1.0 ]
 				}
@@ -133,7 +145,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 70.0, 94.0, 276.333333333333314, 22.0 ],
+					"patching_rect" : [ 70.0, 184.0, 276.333333333333314, 22.0 ],
 					"text" : "dict.unpack add1: sum: classify:"
 				}
 
@@ -145,7 +157,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 70.0, 15.0, 64.0, 22.0 ],
+					"patching_rect" : [ 70.0, 28.0, 64.0, 22.0 ],
 					"text" : "script start"
 				}
 
@@ -165,7 +177,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 575.5, 23.5, 402.0, 376.0 ],
+					"patching_rect" : [ 576.0, 168.5, 519.0, 403.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -178,7 +190,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 70.0, 229.0, 35.0, 22.0 ],
+					"patching_rect" : [ 70.0, 319.0, 35.0, 22.0 ],
 					"text" : "add1"
 				}
 
@@ -190,26 +202,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 70.0, 326.0, 83.0, 22.0 ],
+					"patching_rect" : [ 70.0, 416.0, 83.0, 22.0 ],
 					"text" : "prepend add1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-2",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 70.0, 54.0, 179.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"autostart" : 0,
-						"defer" : 0,
-						"watch" : 1
-					}
-,
-					"text" : "node.script td.main.js @watch 1"
 				}
 
 			}
@@ -265,39 +259,39 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"midpoints" : [ 198.5, 377.0, 31.5, 377.0, 31.5, 43.0, 79.5, 43.0 ],
+					"destination" : [ "obj-30", 0 ],
+					"midpoints" : [ 198.5, 448.0, 61.0, 448.0, 61.0, 112.0, 79.5, 112.0 ],
 					"source" : [ "obj-13", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"midpoints" : [ 336.833333333333314, 376.0, 41.5, 376.0, 41.5, 43.0, 79.5, 43.0 ],
+					"destination" : [ "obj-30", 0 ],
+					"midpoints" : [ 336.833333333333314, 448.0, 56.166666666666657, 448.0, 56.166666666666657, 112.0, 79.5, 112.0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
+					"midpoints" : [ 79.5, 448.0, 62.5, 448.0, 62.5, 112.0, 79.5, 112.0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
-					"source" : [ "obj-2", 0 ]
+					"source" : [ "obj-30", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-2", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"midpoints" : [ 79.5, 376.0, 31.5, 376.0, 31.5, 43.0, 79.5, 43.0 ],
-					"source" : [ "obj-3", 0 ]
+					"source" : [ "obj-30", 1 ]
 				}
 
 			}
@@ -310,7 +304,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
+					"destination" : [ "obj-30", 0 ],
 					"source" : [ "obj-7", 0 ]
 				}
 
@@ -331,13 +325,6 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "td.main.js",
-				"bootpath" : "~/repos/TD-Max",
-				"patcherrelativepath" : "..",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "add1.maxpat",
 				"bootpath" : "~/repos/TD-Max/example",
 				"patcherrelativepath" : ".",
@@ -374,6 +361,20 @@
 				"bootpath" : "~/repos/TD-Max/example",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "td.main.maxpat",
+				"bootpath" : "~/repos/TD-Max",
+				"patcherrelativepath" : "..",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "td.main.js",
+				"bootpath" : "~/repos/TD-Max",
+				"patcherrelativepath" : "..",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
  ],

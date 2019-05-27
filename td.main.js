@@ -1,9 +1,23 @@
-const testSuites = [
-  require('./example/add1.test'),
-  require('./example/sum.test'),
-  require('./example/classify.test')
-];
+// @ts-ignore
 const maxAPI = require('max-api');
+const path = require('path');
+const glob = require('glob');
+
+const loadTestFiles = () => {
+  return new Promise((resolve) => {
+    const handlePath = (patcherPath) => {
+      const tmp = patcherPath.split(':');
+      const testDir = path.dirname(tmp[tmp.length - 1]);
+      const files = glob.sync('!(node_modules)/**/*.test.js', {
+        cwd: testDir,
+        absolute: true
+      });
+      resolve(files.map((file) => require(file)));
+    };
+    maxAPI.addHandler('path', handlePath);
+    maxAPI.outlet('get_path');
+  });
+};
 
 const runTest = ({ generatorName, target, testGenerator }) => {
   return new Promise((resolve) => {
@@ -44,6 +58,7 @@ const runSuite = (testSuite) => {
 };
 
 const main = async () => {
+  const testSuites = await loadTestFiles();
   for (let i = 0; i < testSuites.length; i++) {
     await runSuite(testSuites[i]);
   }
