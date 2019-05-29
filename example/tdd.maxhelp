@@ -556,8 +556,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 592.0, 299.0, 336.0, 49.0 ],
-					"text" : ";\rmax launchbrowser https://github.com/spectral-lab/TDD-Max/tree/master/example"
+					"patching_rect" : [ 592.0, 299.0, 365.0, 49.0 ],
+					"text" : ";\rmax launchbrowser https://github.com/spectral-lab/TDD-Max/tree/master/example/code"
 				}
 
 			}
