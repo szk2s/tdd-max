@@ -109,7 +109,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 420.0, 284.0, 141.0, 51.0 ],
+					"patching_rect" : [ 420.0, 284.0, 142.0, 51.0 ],
 					"text" : "See how you can write your test codes. Click this message!"
 				}
 
@@ -136,7 +136,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 420.0, 213.0, 147.0, 51.0 ],
+					"patching_rect" : [ 420.0, 213.0, 148.0, 51.0 ],
 					"text" : "Check the result in the Max Console.\n( shortcut: cmd + m )"
 				}
 

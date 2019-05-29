@@ -1,5 +1,11 @@
 const { expect } = require('chai');
 
+/**
+ *  `classify` is a patcher which has one inlet and two outlets.
+ *  If receiving a number, it passes input to the left outlet.
+ *  If receiving anything else, it passes input to the right outlet.
+ */
+
 module.exports = {
   target: 'classify',
   testInteger: function*(maxAPI) {

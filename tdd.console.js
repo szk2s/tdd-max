@@ -53,7 +53,11 @@ function print(msg) {
     return;
   }
   if (msg.startsWith('Passed')) {
-    console.log(' # ' + msg);
+    console.log('  # ' + msg);
+    return;
+  }
+  if (msg.startsWith('Init')) {
+    console.log('  - ' + msg);
     return;
   }
   if (msg.startsWith('Finished')) {

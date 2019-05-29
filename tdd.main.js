@@ -28,15 +28,40 @@ const runTest = ({ generatorName, target, testGenerator }) => {
         done = testFunc.next(actual).done;
       } catch (err) {
         console.log(err);
+        maxAPI.removeHandlers(target);
         resolve();
       } finally {
         if (done) {
           console.log('Passed:', generatorName);
+          maxAPI.removeHandlers(target);
           resolve();
         }
       }
     });
     testFunc.next();
+  });
+};
+
+const runInitPatcher = ({ target, generator }) => {
+  return new Promise((resolve) => {
+    const func = generator(maxAPI);
+    maxAPI.addHandler(target, (actual) => {
+      let done;
+      try {
+        done = func.next(actual).done;
+      } catch (err) {
+        console.log(err);
+        maxAPI.removeHandlers(target);
+        resolve();
+      } finally {
+        if (done) {
+          console.log('Initialized:', target);
+          maxAPI.removeHandlers(target);
+          resolve();
+        }
+      }
+    });
+    func.next();
   });
 };
 
@@ -52,10 +77,13 @@ const runSuite = (testSuite) => {
       'tests for `' + target + '` patcher'
     );
     for (let i = 0; i < testGeneratorNames.length; i++) {
+      if (testSuite.hasOwnProperty('initPatcher')) {
+        const generator = testSuite.initPatcher;
+        await runInitPatcher({ target, generator });
+      }
       const generatorName = testGeneratorNames[i];
       const testGenerator = testSuite[generatorName];
       await runTest({ generatorName, target, testGenerator });
-      maxAPI.removeHandlers(target);
     }
     resolve();
   });
