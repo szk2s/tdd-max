@@ -13,6 +13,7 @@
 1. Download zip file from [release page](https://github.com/spectral-lab/TDD-Max/releases)
 1. Unzip
 1. Copy all the contents into a folder which is listed in your File Preference, such as `/Users/Username/Documents/Max 8/Library`
+1. Restart Max application if it is running.
 1. See the help patcher, `tdd.maxhelp`. This also serves as a template of your test patcher.
 
 ## Usage
