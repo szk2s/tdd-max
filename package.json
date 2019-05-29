@@ -12,6 +12,7 @@
     "lint:fix": "yarn eslint . --fix"
   },
   "dependencies": {
+    "chai": "^4.2.0",
     "glob": "^7.1.4"
   },
   "devDependencies": {

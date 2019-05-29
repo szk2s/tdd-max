@@ -39,6 +39,8 @@ module.exports = {
   }
 };
 ```
+More example codes can be found at https://github.com/spectral-lab/TDD-Max/tree/master/example  
+  
 Be careful that all your test codes should be named as `*.test.js`.
 In addition, you must place your test code in the same folder as your test patcher. Or, the subfolder can be used.
 `tdd` will search those folders and load your codes automatically even if you have multiple test files.  

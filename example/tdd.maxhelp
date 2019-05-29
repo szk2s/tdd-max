@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 78.0, 997.0, 788.0 ],
+		"rect" : [ 99.0, 78.0, 997.0, 788.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,15 +39,51 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-15",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 168.333333333333258, 170.5, 178.0, 33.0 ],
+					"text" : "You have to do this only when you use `tdd` first time."
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 1,
 					"fontsize" : 14.0,
 					"id" : "obj-35",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 31.0, 115.0, 334.0, 22.0 ],
-					"text" : "Run your tests, output result from right outlet.",
+					"patching_rect" : [ 46.0, 130.0, 334.0, 22.0 ],
+					"text" : "Outputs the result from right outlet.",
 					"textcolor" : [ 0.533333333333333, 0.533333333333333, 0.533333333333333, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 16.0,
+					"id" : "obj-27",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 46.0, 100.0, 347.0, 24.0 ],
+					"text" : "Load and run your test codes (ex: add1.test.js). "
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 40.0,
+					"id" : "obj-26",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 46.0, 37.0, 112.0, 51.0 ],
+					"text" : "tdd"
 				}
 
 			}
@@ -75,30 +111,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 512.0, 178.0, 443.0, 35.0 ],
 					"text" : ";\rmax launchbrowser https://github.com/spectral-lab/TDD-Max/tree/master/example"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontsize" : 16.0,
-					"id" : "obj-27",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 31.0, 85.0, 297.0, 24.0 ],
-					"text" : "Loads your test codes (ex: add1.test.js). "
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontsize" : 40.0,
-					"id" : "obj-26",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 31.0, 22.0, 112.0, 51.0 ],
-					"text" : "tdd"
 				}
 
 			}
@@ -171,8 +183,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "dictionary" ],
-					"patching_rect" : [ 327.333333333333314, 545.0, 186.999999999999943, 22.0 ],
-					"text" : "dict.pack 0: 1: @triggers 0 1"
+					"patching_rect" : [ 297.333333333333314, 545.0, 217.0, 22.0 ],
+					"text" : "dict.pack outlet0: outlet1: @triggers 0 1"
 				}
 
 			}
@@ -183,7 +195,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 327.333333333333314, 581.0, 95.0, 22.0 ],
+					"patching_rect" : [ 297.333333333333314, 581.0, 95.0, 22.0 ],
 					"text" : "prepend classify"
 				}
 
@@ -196,7 +208,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 327.333333333333314, 484.0, 186.999999999999943, 22.0 ],
+					"patching_rect" : [ 297.333333333333314, 484.0, 186.999999999999943, 22.0 ],
 					"text" : "classify"
 				}
 
@@ -208,7 +220,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 198.666666666666657, 580.0, 79.0, 22.0 ],
+					"patching_rect" : [ 168.666666666666657, 580.0, 79.0, 22.0 ],
 					"text" : "prepend sum"
 				}
 
@@ -219,9 +231,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "float", "float" ],
-					"patching_rect" : [ 198.666666666666657, 383.0, 61.0, 22.0 ],
-					"text" : "unpack f f"
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 168.666666666666657, 396.0, 140.0, 22.0 ],
+					"text" : "dict.unpack inlet0: inlet1:"
 				}
 
 			}
@@ -233,7 +245,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 198.666666666666657, 484.0, 61.0, 22.0 ],
+					"patching_rect" : [ 168.666666666666657, 484.0, 61.0, 22.0 ],
 					"text" : "sum"
 				}
 
@@ -260,7 +272,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 70.0, 349.0, 276.333333333333314, 22.0 ],
+					"patching_rect" : [ 70.0, 349.0, 246.333333333333314, 22.0 ],
 					"text" : "dict.unpack add1: sum: classify:"
 				}
 
@@ -441,7 +453,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-30", 0 ],
-					"midpoints" : [ 208.166666666666657, 613.0, 56.0, 613.0, 56.0, 277.0, 79.5, 277.0 ],
+					"midpoints" : [ 178.166666666666657, 613.0, 56.0, 613.0, 56.0, 277.0, 79.5, 277.0 ],
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -449,7 +461,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-30", 0 ],
-					"midpoints" : [ 336.833333333333314, 613.0, 56.166666666666657, 613.0, 56.166666666666657, 277.0, 79.5, 277.0 ],
+					"midpoints" : [ 306.833333333333314, 613.0, 56.166666666666657, 613.0, 56.166666666666657, 277.0, 79.5, 277.0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -521,8 +533,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "add1.maxpat",
-				"bootpath" : "~/repos/TD-Max/example",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/repos/TDD-Max/example/patchers",
+				"patcherrelativepath" : "./patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -546,28 +558,28 @@
 			}
 , 			{
 				"name" : "sum.maxpat",
-				"bootpath" : "~/repos/TD-Max/example",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/repos/TDD-Max/example/patchers",
+				"patcherrelativepath" : "./patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "classify.maxpat",
-				"bootpath" : "~/repos/TD-Max/example",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/repos/TDD-Max/example/patchers",
+				"patcherrelativepath" : "./patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tdd.maxpat",
-				"bootpath" : "~/repos/TD-Max",
+				"bootpath" : "~/repos/TDD-Max",
 				"patcherrelativepath" : "..",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tdd.main.js",
-				"bootpath" : "~/repos/TD-Max",
+				"bootpath" : "~/repos/TDD-Max",
 				"patcherrelativepath" : "..",
 				"type" : "TEXT",
 				"implicit" : 1
