@@ -15,6 +15,9 @@
     "chai": "^4.2.0",
     "glob": "^7.1.4"
   },
+  "bin": {
+    "tdd-max": "bin/tdd-max"
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
