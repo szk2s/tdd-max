@@ -46,7 +46,11 @@ const runSuite = (testSuite) => {
     const testGeneratorNames = Object.keys(testSuite).filter((key) =>
       key.startsWith('test')
     );
-    console.log('Running test for `' + target + '` patcher');
+    console.log(
+      'Running',
+      testGeneratorNames.length,
+      'tests for `' + target + '` patcher'
+    );
     for (let i = 0; i < testGeneratorNames.length; i++) {
       const generatorName = testGeneratorNames[i];
       const testGenerator = testSuite[generatorName];
@@ -62,7 +66,7 @@ const main = async () => {
   for (let i = 0; i < testSuites.length; i++) {
     await runSuite(testSuites[i]);
   }
-  console.log('Total', testSuites.length, 'test suites have finished.');
+  console.log('Finished: Total', testSuites.length, 'test suites have run.');
 };
 
 main();
