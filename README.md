@@ -13,6 +13,7 @@
 1. Download zip file from [release page](https://github.com/spectral-lab/TDD-Max/releases)
 1. Unzip
 1. Copy all the contents into a folder which is listed in your File Preference, such as `/Users/Username/Documents/Max 8/Library`
+1. Restart Max application if it is running.
 1. See the help patcher, `tdd.maxhelp`. This also serves as a template of your test patcher.
 
 ## Usage
@@ -39,6 +40,8 @@ module.exports = {
   }
 };
 ```
+More example codes can be found at https://github.com/spectral-lab/TDD-Max/tree/master/example  
+  
 Be careful that all your test codes should be named as `*.test.js`.
 In addition, you must place your test code in the same folder as your test patcher. Or, the subfolder can be used.
 `tdd` will search those folders and load your codes automatically even if you have multiple test files.  

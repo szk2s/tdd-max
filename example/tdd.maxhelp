@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 78.0, 997.0, 788.0 ],
+		"rect" : [ 99.0, 78.0, 940.0, 788.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,42 +39,318 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-37",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 8,
+							"minor" : 0,
+							"revision" : 4,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"classnamespace" : "box",
+						"rect" : [ 84.0, 128.0, 640.0, 480.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"visible" : 1,
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 94.0, 130.0, 32.0, 22.0 ],
+									"text" : "print"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 74.0, 282.0, 79.0, 22.0 ],
+									"text" : "loadmess set"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-16",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 169.0, 241.0, 41.0, 22.0 ],
+									"text" : "set $1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-6",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 50.0, 241.0, 41.0, 22.0 ],
+									"text" : "set $1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-21",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 50.0, 202.0, 138.0, 22.0 ],
+									"text" : "dict.unpack args: status:"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-24",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 50.0, 167.0, 83.0, 22.0 ],
+									"text" : "route success"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-25",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 50.0, 100.0, 63.0, 22.0 ],
+									"text" : "route npm"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-33",
+									"index" : 1,
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-34",
+									"index" : 1,
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 50.0, 323.0, 30.0, 30.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-36",
+									"index" : 2,
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 169.0, 323.0, 30.0, 30.0 ]
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-34", 0 ],
+									"order" : 1,
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-36", 0 ],
+									"order" : 0,
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-36", 0 ],
+									"source" : [ "obj-16", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-16", 0 ],
+									"source" : [ "obj-21", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"source" : [ "obj-21", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-21", 0 ],
+									"source" : [ "obj-24", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"source" : [ "obj-25", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-24", 0 ],
+									"source" : [ "obj-25", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-25", 0 ],
+									"source" : [ "obj-33", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-34", 0 ],
+									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 188.0, 317.0, 69.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"description" : "",
+						"digest" : "",
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p parse-log"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 14.0,
+					"id" : "obj-2",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 238.0, 349.0, 92.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 14.0,
+					"id" : "obj-20",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 188.0, 349.0, 53.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-22",
+					"linecount" : 2,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 592.0, 235.0, 97.0, 35.0 ],
+					"text" : ";\rmax maxwindow"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-15",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 174.333333333333258, 163.5, 178.0, 47.0 ],
+					"text" : "You have to do this only when you use `tdd` for the first first time."
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 1,
 					"fontsize" : 14.0,
 					"id" : "obj-35",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 31.0, 115.0, 334.0, 22.0 ],
-					"text" : "Run your tests, output result from right outlet.",
+					"patching_rect" : [ 46.0, 130.0, 334.0, 22.0 ],
+					"text" : "Outputs the result from right outlet.",
 					"textcolor" : [ 0.533333333333333, 0.533333333333333, 0.533333333333333, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bubble" : 1,
-					"bubbleside" : 2,
-					"id" : "obj-32",
-					"linecount" : 3,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 512.0, 102.0, 141.0, 66.0 ],
-					"text" : "See how you can write your test codes. Click this message!"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-29",
-					"linecount" : 2,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 512.0, 178.0, 443.0, 35.0 ],
-					"text" : ";\rmax launchbrowser https://github.com/spectral-lab/TDD-Max/tree/master/example"
 				}
 
 			}
@@ -85,8 +361,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 31.0, 85.0, 297.0, 24.0 ],
-					"text" : "Loads your test codes (ex: add1.test.js). "
+					"patching_rect" : [ 46.0, 100.0, 347.0, 24.0 ],
+					"text" : "Load and run your test codes (ex: add1.test.js). "
 				}
 
 			}
@@ -97,7 +373,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 31.0, 22.0, 112.0, 51.0 ],
+					"patching_rect" : [ 46.0, 37.0, 112.0, 51.0 ],
 					"text" : "tdd"
 				}
 
@@ -105,14 +381,41 @@
 , 			{
 				"box" : 				{
 					"bubble" : 1,
-					"bubbleside" : 2,
-					"id" : "obj-23",
-					"linecount" : 2,
+					"bubbleside" : 3,
+					"id" : "obj-32",
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 862.0, 278.0, 126.0, 52.0 ],
-					"text" : "Check the result on your  console"
+					"patching_rect" : [ 435.0, 299.0, 142.0, 51.0 ],
+					"text" : "See how you can write your test codes. Click this message!"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"linecount" : 3,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 592.0, 299.0, 336.0, 49.0 ],
+					"text" : ";\rmax launchbrowser https://github.com/spectral-lab/TDD-Max/tree/master/example"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"bubbleside" : 3,
+					"id" : "obj-23",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 435.0, 228.0, 148.0, 51.0 ],
+					"text" : "Check the result in the Max Console.\n( shortcut: cmd + m )"
 				}
 
 			}
@@ -159,7 +462,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 70.0, 288.0, 496.0, 22.0 ],
+					"patching_rect" : [ 70.0, 288.0, 137.0, 22.0 ],
 					"text" : "tdd"
 				}
 
@@ -171,8 +474,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "dictionary" ],
-					"patching_rect" : [ 327.333333333333314, 545.0, 186.999999999999943, 22.0 ],
-					"text" : "dict.pack 0: 1: @triggers 0 1"
+					"patching_rect" : [ 361.0, 590.0, 217.0, 22.0 ],
+					"text" : "dict.pack outlet0: outlet1: @triggers 0 1"
 				}
 
 			}
@@ -183,7 +486,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 327.333333333333314, 581.0, 95.0, 22.0 ],
+					"patching_rect" : [ 361.0, 626.0, 95.0, 22.0 ],
 					"text" : "prepend classify"
 				}
 
@@ -196,7 +499,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 327.333333333333314, 484.0, 186.999999999999943, 22.0 ],
+					"patching_rect" : [ 361.0, 529.0, 186.999999999999943, 22.0 ],
 					"text" : "classify"
 				}
 
@@ -208,7 +511,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 198.666666666666657, 580.0, 79.0, 22.0 ],
+					"patching_rect" : [ 198.666666666666657, 625.0, 79.0, 22.0 ],
 					"text" : "prepend sum"
 				}
 
@@ -219,9 +522,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "float", "float" ],
-					"patching_rect" : [ 198.666666666666657, 383.0, 61.0, 22.0 ],
-					"text" : "unpack f f"
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 198.666666666666657, 441.0, 140.0, 22.0 ],
+					"text" : "dict.unpack inlet0: inlet1:"
 				}
 
 			}
@@ -233,7 +536,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 198.666666666666657, 484.0, 61.0, 22.0 ],
+					"patching_rect" : [ 198.666666666666657, 529.0, 61.0, 22.0 ],
 					"text" : "sum"
 				}
 
@@ -247,7 +550,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 70.0, 438.0, 288.0, 33.0 ],
+					"patching_rect" : [ 70.0, 483.0, 288.0, 33.0 ],
 					"text" : "These orange boxes are what you are developing. Click and try changing inside.",
 					"textcolor" : [ 0.2, 0.2, 0.2, 1.0 ]
 				}
@@ -260,28 +563,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 70.0, 349.0, 276.333333333333314, 22.0 ],
+					"patching_rect" : [ 70.0, 394.0, 310.0, 22.0 ],
 					"text" : "dict.unpack add1: sum: classify:"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-6",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "n4m.monitor.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 547.0, 337.5, 400.0, 220.0 ],
-					"viewvisibility" : 1
 				}
 
 			}
@@ -293,7 +576,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 70.0, 484.0, 35.0, 22.0 ],
+					"patching_rect" : [ 70.0, 529.0, 35.0, 22.0 ],
 					"text" : "add1"
 				}
 
@@ -305,7 +588,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 70.0, 581.0, 83.0, 22.0 ],
+					"patching_rect" : [ 70.0, 626.0, 83.0, 22.0 ],
 					"text" : "prepend add1"
 				}
 
@@ -325,7 +608,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 830.0, 287.0, 20.0, 20.0 ],
+					"patching_rect" : [ 405.333333333333258, 243.5, 20.0, 20.0 ],
 					"rounded" : 60.0,
 					"text" : "3",
 					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ],
@@ -441,7 +724,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-30", 0 ],
-					"midpoints" : [ 208.166666666666657, 613.0, 56.0, 613.0, 56.0, 277.0, 79.5, 277.0 ],
+					"midpoints" : [ 208.166666666666657, 708.0, 56.0, 708.0, 56.0, 277.0, 79.5, 277.0 ],
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -449,7 +732,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-30", 0 ],
-					"midpoints" : [ 336.833333333333314, 613.0, 56.166666666666657, 613.0, 56.166666666666657, 277.0, 79.5, 277.0 ],
+					"midpoints" : [ 370.5, 710.0, 56.166666666666657, 710.0, 56.166666666666657, 277.0, 79.5, 277.0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -464,7 +747,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-30", 0 ],
-					"midpoints" : [ 79.5, 613.0, 55.5, 613.0, 55.5, 277.0, 79.5, 277.0 ],
+					"midpoints" : [ 79.5, 709.0, 55.5, 709.0, 55.5, 277.0, 79.5, 277.0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -478,8 +761,22 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
+					"destination" : [ "obj-37", 0 ],
 					"source" : [ "obj-30", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-37", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"source" : [ "obj-37", 0 ]
 				}
 
 			}
@@ -521,53 +818,42 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "add1.maxpat",
-				"bootpath" : "~/repos/TD-Max/example",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/repos/TDD-Max/example/patchers",
+				"patcherrelativepath" : "./patchers",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "n4m.monitor.maxpat",
-				"bootpath" : "C74:/packages/Node For Max/patchers/debug-monitor",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "resize_n4m_monitor_patcher.js",
-				"bootpath" : "C74:/packages/Node For Max/patchers/debug-monitor",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "fit_jweb_to_bounds.js",
-				"bootpath" : "C74:/packages/Node For Max/patchers/debug-monitor",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sum.maxpat",
-				"bootpath" : "~/repos/TD-Max/example",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/repos/TDD-Max/example/patchers",
+				"patcherrelativepath" : "./patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "classify.maxpat",
-				"bootpath" : "~/repos/TD-Max/example",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/repos/TDD-Max/example/patchers",
+				"patcherrelativepath" : "./patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tdd.maxpat",
-				"bootpath" : "~/repos/TD-Max",
+				"bootpath" : "~/repos/TDD-Max",
 				"patcherrelativepath" : "..",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tdd.main.js",
-				"bootpath" : "~/repos/TD-Max",
+				"bootpath" : "~/repos/TDD-Max",
+				"patcherrelativepath" : "..",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tdd.console.js",
+				"bootpath" : "~/repos/TDD-Max",
 				"patcherrelativepath" : "..",
 				"type" : "TEXT",
 				"implicit" : 1
