@@ -20,7 +20,8 @@
 To use TDD-Max, you need to prepare two things, "test patcher" and "test code"
 ### Test patcher  
 You can make your test patcher as shown below. If you would like to use this as your template, this is accessible from the help patcher.  
-<img width="993" alt="Screen Shot 2019-05-28 at 1 37 50" src="https://user-images.githubusercontent.com/31060964/58431536-48e1be80-80e9-11e9-9463-e0abc1d4493d.png">  
+  
+<img width="1440" alt="Screen Shot 2019-05-29 at 18 11 32" src="https://user-images.githubusercontent.com/31060964/58545345-054c9900-823e-11e9-952e-21e33690fa07.png">  
 
 ### Test codes
 ```js
