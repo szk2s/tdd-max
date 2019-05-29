@@ -2,12 +2,13 @@
 > Utility library which helps Test Driven Development in Cycling '74 Max
 
 ## What is TDD?
-  See [Wikipedia](https://en.wikipedia.org/wiki/Test-driven_development)
+- Test Driven Development
+- “Test-First” approach in which unit tests are written before code or patcher
+- See [Wikipedia](https://en.wikipedia.org/wiki/Test-driven_development)
 ## Why TDD is important?
-  The importance of TDD cannot be overemphasized.  
-  TDD means fewer bugs, higher quality software, and a razor focus, but it can slow development down and the test suites can be tedious to manage and maintain.  
-  All in all, it is a recommended approach as the Pros far outweighs the Cons.  
-  See [this article](https://medium.com/@gondy/the-importance-of-test-driven-development-f80b0d02edd8)
+- TDD means fewer bugs, higher quality software, and a razor focus.  
+- TDD allows problems to be detected as early as possible  
+- See [this article](https://medium.com/@gondy/the-importance-of-test-driven-development-f80b0d02edd8)
 
 ## Install
 1. Download zip file from [release page](https://github.com/spectral-lab/TDD-Max/releases)
