@@ -455,8 +455,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 254.0, 349.0, 92.0, 22.0 ],
-					"text" : "stopped"
+					"patching_rect" : [ 254.0, 349.0, 92.0, 22.0 ]
 				}
 
 			}
@@ -468,8 +467,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 188.0, 349.0, 53.0, 22.0 ],
-					"text" : "script"
+					"patching_rect" : [ 188.0, 349.0, 53.0, 22.0 ]
 				}
 
 			}
@@ -489,12 +487,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-15",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 174.333333333333258, 163.5, 178.0, 47.0 ],
-					"text" : "You have to do this only when you use `tdd` for the first first time."
+					"patching_rect" : [ 173.333333333333258, 170.5, 178.0, 33.0 ],
+					"text" : "You have to do this only when you use `tdd` for the first time."
 				}
 
 			}
@@ -733,7 +731,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
+					"outlettype" : [ "float" ],
 					"patching_rect" : [ 70.0, 529.0, 35.0, 22.0 ],
 					"text" : "add1"
 				}
