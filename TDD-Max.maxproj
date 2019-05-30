@@ -2,7 +2,7 @@
 	"name" : "TDD-Max",
 	"version" : 1,
 	"creationdate" : 3641985905,
-	"modificationdate" : 3641992496,
+	"modificationdate" : 3642055564,
 	"viewrect" : [ 25.0, 69.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -19,8 +19,8 @@
 				"kind" : "helpfile",
 				"local" : 1,
 				"singleton" : 				{
-					"bootpath" : "~/repos/TDD-Max/example",
-					"projectrelativepath" : "./example"
+					"bootpath" : "~/repos/tdd-max/help",
+					"projectrelativepath" : "./help"
 				}
 
 			}
