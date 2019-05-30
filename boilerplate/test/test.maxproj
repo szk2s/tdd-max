@@ -1,26 +1,22 @@
 {
-	"name" : "TDD-Max",
+	"name" : "test",
 	"version" : 1,
-	"creationdate" : 3641985905,
-	"modificationdate" : 3642055564,
-	"viewrect" : [ 25.0, 69.0, 300.0, 500.0 ],
-	"autoorganize" : 1,
+	"creationdate" : 3642055787,
+	"modificationdate" : 3642056307,
+	"viewrect" : [ 0.0, 44.0, 361.0, 533.0 ],
+	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
 	"autolocalize" : 0,
 	"contents" : 	{
 		"patchers" : 		{
-			"tdd.maxpat" : 			{
+			"test.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tdd.maxhelp" : 			{
-				"kind" : "helpfile",
 				"local" : 1,
+				"toplevel" : 1,
 				"singleton" : 				{
-					"bootpath" : "~/repos/tdd-max/help",
-					"projectrelativepath" : "./help"
+					"bootpath" : "~/repos/tdd-max/boilerplate/test",
+					"projectrelativepath" : "."
 				}
 
 			}

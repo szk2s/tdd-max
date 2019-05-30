@@ -13,7 +13,11 @@
   },
   "dependencies": {
     "chai": "^4.2.0",
+    "fs-extra": "^8.0.1",
     "glob": "^7.1.4"
+  },
+  "bin": {
+    "tdd-max": "bin/tdd-max.js"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

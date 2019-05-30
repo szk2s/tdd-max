@@ -455,8 +455,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 254.0, 349.0, 92.0, 22.0 ],
-					"text" : "stopped"
+					"patching_rect" : [ 254.0, 349.0, 92.0, 22.0 ]
 				}
 
 			}
@@ -468,8 +467,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 188.0, 349.0, 53.0, 22.0 ],
-					"text" : "script"
+					"patching_rect" : [ 188.0, 349.0, 53.0, 22.0 ]
 				}
 
 			}
@@ -489,12 +487,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-15",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 174.333333333333258, 163.5, 178.0, 47.0 ],
-					"text" : "You have to do this only when you use `tdd` for the first first time."
+					"patching_rect" : [ 173.333333333333258, 170.5, 178.0, 33.0 ],
+					"text" : "You have to do this only when you use `tdd` for the first time."
 				}
 
 			}
@@ -558,8 +556,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 592.0, 299.0, 336.0, 49.0 ],
-					"text" : ";\rmax launchbrowser https://github.com/spectral-lab/TDD-Max/tree/master/example"
+					"patching_rect" : [ 592.0, 299.0, 343.0, 49.0 ],
+					"text" : ";\rmax launchbrowser https://github.com/spectral-lab/TDD-Max/tree/master/help/code"
 				}
 
 			}
@@ -733,7 +731,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
+					"outlettype" : [ "float" ],
 					"patching_rect" : [ 70.0, 529.0, 35.0, 22.0 ],
 					"text" : "add1"
 				}
@@ -976,42 +974,42 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "add1.maxpat",
-				"bootpath" : "~/repos/TDD-Max/example/patchers",
+				"bootpath" : "~/repos/tdd-max/help/patchers",
 				"patcherrelativepath" : "./patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sum.maxpat",
-				"bootpath" : "~/repos/TDD-Max/example/patchers",
+				"bootpath" : "~/repos/tdd-max/help/patchers",
 				"patcherrelativepath" : "./patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "classify.maxpat",
-				"bootpath" : "~/repos/TDD-Max/example/patchers",
+				"bootpath" : "~/repos/tdd-max/help/patchers",
 				"patcherrelativepath" : "./patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tdd.maxpat",
-				"bootpath" : "~/repos/TDD-Max",
+				"bootpath" : "~/repos/tdd-max",
 				"patcherrelativepath" : "..",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tdd.main.js",
-				"bootpath" : "~/repos/TDD-Max",
+				"bootpath" : "~/repos/tdd-max",
 				"patcherrelativepath" : "..",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tdd.console.js",
-				"bootpath" : "~/repos/TDD-Max",
+				"bootpath" : "~/repos/tdd-max",
 				"patcherrelativepath" : "..",
 				"type" : "TEXT",
 				"implicit" : 1
