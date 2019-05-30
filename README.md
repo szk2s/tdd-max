@@ -11,14 +11,21 @@
 - See [this article](https://medium.com/@gondy/the-importance-of-test-driven-development-f80b0d02edd8)
 
 ## Install
-1. Download zip file from [release page](https://github.com/spectral-lab/TDD-Max/releases)
-1. Unzip
-1. Copy all the contents into a folder which is listed in your File Preference, such as `/Users/Username/Documents/Max 8/Library`
-1. Restart Max application if it is running.
-1. See the help patcher, `tdd.maxhelp`. This also serves as a template of your test patcher.
-
+```
+yarn add -D tdd-max
+```
 ## Usage
 To use TDD-Max, you need to prepare two things, "test patcher" and "test code"
+Instead of setting up them manually, you can use our boilerplate with this command.
+```
+yarn tdd-max --init
+```
+
+You can pass an argument to indicate the destination path.
+```
+yarn tdd-max --init ./projects/test
+```
+
 ### Test patcher  
 You can make your test patcher as shown below. If you would like to use this as your template, this is accessible in the help patcher.  
   
@@ -53,8 +60,8 @@ module.exports = {
 };
 
 ```
-More example codes can be found at [example folder](https://github.com/spectral-lab/TDD-Max/tree/master/example)  
-  
+More example codes can be found at [help folder](https://github.com/spectral-lab/TDD-Max/tree/master/help)  
+
 #### Notes
 - Test codes should be named as `*.test.js`.
 - Test codes sould be placed in the same folder as your test patcher. You can also use subfolders.
@@ -65,6 +72,14 @@ If you'd like to use some assertion library such as 'chai', please be aware thos
 
 #### Generator function
 If you are not familiar to `generator function`, please see the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*).  
+
+## Alternative installation
+Though it is highly recommended to use yarn, you can manually install this library in case you are not familiar to dependency managers. 
+1. Download zip file from [release page](https://github.com/spectral-lab/TDD-Max/releases)
+1. Unzip
+1. Copy all the contents into a folder which is listed in your File Preference, such as `/Users/Username/Documents/Max 8/Library`
+1. Restart Max application if it is running.
+1. See the help patcher, `tdd.maxhelp`. This also serves as a template of your test patcher.
 
 ## PR is welcome!
 Though you can file an issue, PR is much more appreciated. The code is simple enough to modify quickly.
