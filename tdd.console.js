@@ -1,5 +1,9 @@
 // @ts-nocheck
 
+/***
+ * For `js` Object in Max
+ */
+
 if (!String.prototype.startsWith) {
   Object.defineProperty(String.prototype, 'startsWith', {
     value: function(search, pos) {

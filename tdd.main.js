@@ -1,13 +1,14 @@
 // @ts-ignore
+/***
+ * For `node.scrpit` object
+ */
 const maxAPI = require('max-api');
-const path = require('path');
 const glob = require('glob');
 
 const loadTestFiles = () => {
   return new Promise((resolve) => {
     const handlePath = (patcherPath) => {
-      const tmp = patcherPath.split(':');
-      const testDir = path.dirname(tmp[tmp.length - 1]);
+      const testDir = patcherPath.split(':')[1];
       const files = glob.sync('!(node_modules)/**/*.test.js', {
         cwd: testDir,
         absolute: true
@@ -65,28 +66,25 @@ const runInitPatcher = ({ target, generator }) => {
   });
 };
 
-const runSuite = (testSuite) => {
-  return new Promise(async (resolve) => {
-    const target = testSuite.target;
-    const testGeneratorNames = Object.keys(testSuite).filter((key) =>
-      key.startsWith('test')
-    );
-    console.log(
-      'Running',
-      testGeneratorNames.length,
-      'tests for `' + target + '` patcher'
-    );
-    for (let i = 0; i < testGeneratorNames.length; i++) {
-      if (testSuite.hasOwnProperty('initPatcher')) {
-        const generator = testSuite.initPatcher;
-        await runInitPatcher({ target, generator });
-      }
-      const generatorName = testGeneratorNames[i];
-      const testGenerator = testSuite[generatorName];
-      await runTest({ generatorName, target, testGenerator });
+const runSuite = async (testSuite) => {
+  const target = testSuite.target;
+  const testGeneratorNames = Object.keys(testSuite).filter((key) =>
+    key.startsWith('test')
+  );
+  console.log(
+    'Running',
+    testGeneratorNames.length,
+    'tests for `' + target + '` patcher'
+  );
+  for (let i = 0; i < testGeneratorNames.length; i++) {
+    if (testSuite.initPatcher) {
+      const generator = testSuite.initPatcher;
+      await runInitPatcher({ target, generator });
     }
-    resolve();
-  });
+    const generatorName = testGeneratorNames[i];
+    const testGenerator = testSuite[generatorName];
+    await runTest({ generatorName, target, testGenerator });
+  }
 };
 
 const main = async () => {

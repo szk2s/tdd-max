@@ -10,21 +10,21 @@
     "format": "yarn prettier --write src/**/*.js index.js",
     "lint": "yarn eslint .",
     "lint:fix": "yarn eslint . --fix",
-    "postpublish" : "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
+    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
   "dependencies": {
     "chai": "^4.2.0",
-    "fs-extra": "^8.0.1",
-    "glob": "^7.1.4"
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.5"
   },
   "bin": {
     "tdd-max": "bin/tdd-max.js"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.17.1"
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2"
   }
 }
