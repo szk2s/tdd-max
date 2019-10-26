@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 /***
- * For JS Object in Max
+ * For `js` Object in Max
  */
 
 if (!String.prototype.startsWith) {

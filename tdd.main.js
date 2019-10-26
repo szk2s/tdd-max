@@ -1,4 +1,7 @@
 // @ts-ignore
+/***
+ * For `node.scrpit` object
+ */
 const maxAPI = require('max-api');
 const path = require('path');
 const glob = require('glob');
