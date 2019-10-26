@@ -83,3 +83,10 @@ Though it is highly recommended to use yarn, you can manually install this libra
 
 ## PR is welcome!
 Though you can file an issue, PR is much more appreciated. The code is simple enough to modify quickly.
+
+## For contributors
+### Publish
+1. Indicate the version number in the `package.json`
+1. commit and push
+1. run `npm publish`
+Tag will be automatically genearated
