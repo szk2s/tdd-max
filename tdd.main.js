@@ -3,14 +3,12 @@
  * For `node.scrpit` object
  */
 const maxAPI = require('max-api');
-const path = require('path');
 const glob = require('glob');
 
 const loadTestFiles = () => {
   return new Promise((resolve) => {
     const handlePath = (patcherPath) => {
-      const tmp = patcherPath.split(':');
-      const testDir = path.dirname(tmp[tmp.length - 1]);
+      const testDir = patcherPath.split(':')[1];
       const files = glob.sync('!(node_modules)/**/*.test.js', {
         cwd: testDir,
         absolute: true
