@@ -56,6 +56,10 @@ function print(msg) {
     console.log(msg);
     return;
   }
+  if (msg.startsWith('Description')) {
+    console.log(msg.replace('Description: ', ''));
+    return;
+  }
   if (msg.startsWith('Passed')) {
     console.log('  # ' + msg);
     return;

@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 4,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -48,8 +48,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 4,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -455,7 +455,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 254.0, 349.0, 92.0, 22.0 ]
+					"patching_rect" : [ 254.0, 349.0, 92.0, 22.0 ],
+					"text" : "started"
 				}
 
 			}
@@ -467,7 +468,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 188.0, 349.0, 53.0, 22.0 ]
+					"patching_rect" : [ 188.0, 349.0, 53.0, 22.0 ],
+					"text" : "script"
 				}
 
 			}
@@ -524,12 +526,14 @@
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
+					"fontname" : "Roboto",
 					"fontsize" : 40.0,
 					"id" : "obj-26",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 46.0, 37.0, 112.0, 51.0 ],
+					"patching_rect" : [ 46.0, 37.0, 118.0, 59.0 ],
 					"text" : "tdd"
 				}
 
