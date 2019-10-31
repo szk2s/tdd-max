@@ -1,7 +1,8 @@
 const assert = require('chai').assert;
 
-describe('add1 patcher', () => {
-  describe('adds 1 to input number', function*() {
+describe(
+  'adds 1 to input number',
+  function*() {
     maxAPI.outlet({ add1: 3 });
     assert.equal(yield, 4, 'ordinary int');
     maxAPI.outlet({ add1: 0.1 });
@@ -10,5 +11,6 @@ describe('add1 patcher', () => {
     assert.equal(yield, 100001, 'big int');
     maxAPI.outlet({ add1: -2.1 });
     assert.equal(yield, -1.1, 'negative float');
-  }, 'add1');
-});
+  },
+  'add1'
+);

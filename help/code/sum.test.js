@@ -1,24 +1,27 @@
 const assert = require('chai').assert;
 
-module.exports = {
-  // Name of the patcher which you want to test
-  target: 'sum',
+//TODO: move the first two lines into `beforeEach`
 
-  // `initPatcher` will be executed just before each test function.
-  initPatcher: function*(maxAPI) {
+describe(
+  'Sum Two Numbers',
+  function*() {
     maxAPI.outlet({ sum: { inlet0: 0.0, inlet1: 0.0 } });
     assert.notEqual(yield, null, 'isOk');
-  },
-
-  // The key of each test generator function should start with 'test'
-  testSumTwoNumbers: function*(maxAPI) {
     maxAPI.outlet({ sum: { inlet0: 1, inlet1: 2 } });
     assert.equal(yield, 3, 'ordinary int');
     maxAPI.outlet({ sum: { inlet0: 0.1, inlet1: 0.2 } });
     assert.equal(yield, 0.3, 'float val');
   },
-  testWithoutRightInlet: function*(maxAPI) {
+  'sum'
+);
+
+describe(
+  'Without Right Inlet',
+  function*() {
+    maxAPI.outlet({ sum: { inlet0: 0.0, inlet1: 0.0 } });
+    assert.notEqual(yield, null, 'isOk');
     maxAPI.outlet({ sum: { inlet0: -1.2 } });
     assert.equal(yield, -1.2, 'ordinary int');
-  }
-};
+  },
+  'sum'
+);
