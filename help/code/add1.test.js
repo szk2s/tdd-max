@@ -1,6 +1,6 @@
 const assert = require('chai').assert;
 
-describe(
+test(
   'adds 1 to input number',
   function*() {
     maxAPI.outlet({ add1: 3 });

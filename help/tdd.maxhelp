@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 78.0, 1012.0, 788.0 ],
+		"rect" : [ -1646.0, 78.0, 877.0, 764.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -55,7 +55,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 84.0, 128.0, 644.0, 541.0 ],
+						"rect" : [ 34.0, 78.0, 1852.0, 968.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -82,7 +82,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-19",
@@ -455,8 +454,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 254.0, 349.0, 92.0, 22.0 ],
-					"text" : "started"
+					"patching_rect" : [ 254.0, 349.0, 92.0, 22.0 ]
 				}
 
 			}
@@ -468,8 +466,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 188.0, 349.0, 53.0, 22.0 ],
-					"text" : "script"
+					"patching_rect" : [ 188.0, 349.0, 53.0, 22.0 ]
 				}
 
 			}

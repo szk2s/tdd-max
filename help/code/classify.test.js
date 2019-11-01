@@ -6,7 +6,7 @@ const { expect } = require('chai');
  *  If receiving anything else, it passes input to the right outlet.
  */
 
-describe(
+test(
   '`classify` passes its input to left outlet if it is a number',
   function*() {
     maxAPI.outlet({ classify: 2 });
@@ -18,7 +18,7 @@ describe(
   },
   'classify'
 );
-describe(
+test(
   '`classify`passes its input to right outlet if it is a number',
   function*() {
     maxAPI.outlet({ classify: [0, 1.65, 0.2] });
