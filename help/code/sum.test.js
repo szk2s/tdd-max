@@ -6,7 +6,7 @@ beforeEach(
     maxAPI.outlet({ sum: { inlet0: 0.0, inlet1: 0.0 } });
     assert.notEqual(yield, null, 'isOk');
   },
-  'sum'
+  'sum' // Name of the patcher which you want to test
 );
 
 test(

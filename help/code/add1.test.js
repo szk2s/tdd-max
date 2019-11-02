@@ -12,5 +12,5 @@ test(
     maxAPI.outlet({ add1: -2.1 });
     assert.equal(yield, -1.1, 'negative float');
   },
-  'add1'
+  'add1' // Name of the patcher which you want to test
 );
