@@ -11,6 +11,7 @@
 - See [this article](https://medium.com/@gondy/the-importance-of-test-driven-development-f80b0d02edd8)
 
 ## Install
+Use this command at your project root.
 ```
 yarn add -D tdd-max
 ```
@@ -36,29 +37,20 @@ Here is an example of how you can write your test codes.
 ```js
 const assert = require('chai').assert;
 
-module.exports = {
-  // Name of the patcher which you want to test
-  target: 'sum',
-
-  // `initPatcher` will be executed just before each test function.
-  initPatcher: function*(maxAPI) {
-    maxAPI.outlet({ sum: { inlet0: 0.0, inlet1: 0.0 } });
-    assert.notEqual(yield, null, 'isOk');
+test(
+  'adds 1 to input number', // Name of this test
+  function*() {
+    maxAPI.outlet({ add1: 3 });
+    assert.equal(yield, 4, 'ordinary int');
+    maxAPI.outlet({ add1: 0.1 });
+    assert.equal(yield, 1.1, 'float val');
+    maxAPI.outlet({ add1: 100000 });
+    assert.equal(yield, 100001, 'big int');
+    maxAPI.outlet({ add1: -2.1 });
+    assert.equal(yield, -1.1, 'negative float');
   },
-
-  // The key of each test generator function should start with 'test'
-  testSumTwoNumbers: function*(maxAPI) {
-    maxAPI.outlet({ sum: { inlet0: 1, inlet1: 2 } });
-    assert.equal(yield, 3, 'ordinary int');
-    maxAPI.outlet({ sum: { inlet0: 0.1, inlet1: 0.2 } });
-    assert.equal(yield, 0.3, 'float val');
-  },
-  testWithoutRightInlet: function*(maxAPI) {
-    maxAPI.outlet({ sum: { inlet0: -1.2 } });
-    assert.equal(yield, -1.2, 'ordinary int');
-  }
-};
-
+  'add1' // Name of the patcher which you want to test
+);
 ```
 More example codes can be found at [help folder](https://github.com/spectral-lab/TDD-Max/tree/master/help)  
 

@@ -50,7 +50,22 @@ var console = {
   }
 };
 
-function print(msg) {
+function print(input) {
+  if (input.startsWith('stderr')) {
+    console.error(input.replace('stderr ', ''))
+    return;
+  }
+  const msg = input.replace('stdout ', '');
+  if (msg.startsWith('Starting')) {
+    console.log(
+      '///////////////////////////////////////////////////////////////'
+    );
+    console.log('TDD-MAX');
+    console.log(
+      '///////////////////////////////////////////////////////////////'
+    );
+    return;
+  }
   if (msg.startsWith('Running')) {
     console.log('===========================');
     console.log(msg);
@@ -74,5 +89,5 @@ function print(msg) {
     );
     return;
   }
-  console.error(msg);
+  console.log(msg);
 }
