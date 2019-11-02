@@ -23,7 +23,7 @@ const insertSearchPath = (maxprojPath) => {
   fs.writeJsonSync(maxprojPath, maxproj, { spaces: 2 });
 };
 
-const initTestEnvironment = (relativeDestPath) => {
+const init = (relativeDestPath) => {
   const dest = path.resolve(relativeDestPath || './test');
   fs.copy(path.join(__dirname, '../boilerplate/test'), dest)
     .then(() => {
@@ -33,4 +33,4 @@ const initTestEnvironment = (relativeDestPath) => {
     .catch((err) => console.error(err));
 };
 
-module.exports = initTestEnvironment;
+module.exports = init;
