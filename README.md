@@ -60,7 +60,7 @@ More example codes can be found at [help folder](https://github.com/spectral-lab
 -  - `tdd` will search those folders and load your codes automatically even if you have multiple test files.  
 
 #### Dependencies of your test codes  
-If you'd like to use some assertion library such as 'chai', please be aware those libraries should be installed to your project root, not to the folder where the TDD-Max is installed. Sending `npm install chai` message to `tdd` patcher will not work, so please use the command line.  
+If you'd like to use some assertion library such as 'chai', please be aware that those libraries should be installed to your project root, not to the folder where the TDD-Max is installed. Sending `npm install chai` message to `tdd` patcher will not work, so please use `yarn add -D [package-name]`.  
 
 #### Generator function
 If you are not familiar to `generator function`, please see the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*).  
