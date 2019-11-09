@@ -1,6 +1,8 @@
 # TDD-Max
 > Utility library which helps Test Driven Development in Cycling '74 Max
 
+***This package works only in Max 8 or higher***
+
 ## What is TDD?
 - Test Driven Development
 - “Test-First” approach in which unit tests are written before code or patcher
@@ -77,6 +79,13 @@ Though it is highly recommended to use yarn, you can manually install this libra
 Though you can file an issue, PR is much more appreciated. The code is simple enough to modify quickly.
 
 ## For contributors
+### Prerequisite
+- Node 10.16
+- Yarn
+- Max 8.1.0 or higher
+### Set up your dev environment
+1. Clone this repository
+1. Add path of your cloned directory to `Options >> File Preference` of your Max
 ### Publish
 1. Indicate the version number in the `package.json`
 1. commit and push
