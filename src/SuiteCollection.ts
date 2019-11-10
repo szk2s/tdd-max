@@ -1,4 +1,4 @@
-class SuiteCollection extends Array {
+export class SuiteCollection extends Array {
   constructor() {
     super();
   }
@@ -14,5 +14,3 @@ class SuiteCollection extends Array {
     console.log('Finished: Total', this.length, 'test suites have run.');
   }
 }
-
-module.exports = SuiteCollection;

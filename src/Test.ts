@@ -1,12 +1,16 @@
-const { TEST } = require('./constants/class-names');
+import { TEST } from './constants/class-names';
 
-class Test {
+export class Test {
+  maxAPI: any;
+  name: string;
+  fn: CallableFunction;
+  target: string;
+  type: string = TEST;
   constructor(maxAPI, { name, fn, target }) {
     this.maxAPI = maxAPI;
     this.name = name;
     this.fn = fn;
     this.target = target;
-    this.type = TEST;
   }
   async run() {
     this.fn.constructor.name === 'GeneratorFunction'
@@ -37,4 +41,3 @@ class Test {
     });
   }
 }
-module.exports = Test;

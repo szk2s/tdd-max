@@ -2,7 +2,7 @@ const path = require('path');
 const glob = require('glob');
 const DEFAULT_CONFIG = require('./constants/default-config');
 
-module.exports = (maxAPIFacade) => {
+export const ConfigLoader = (maxAPIFacade) => {
   const resolvePath = (config, patcherDir) => {
     const ret = { ...config };
     if (config.testCodeDir) {

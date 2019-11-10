@@ -1,4 +1,5 @@
-class MaxAPIFacade {
+export class MaxAPIFacade {
+  maxAPI: any;
   constructor(maxAPI) {
     this.maxAPI = maxAPI;
   }
@@ -14,5 +15,3 @@ class MaxAPIFacade {
     });
   }
 }
-
-module.exports = MaxAPIFacade;

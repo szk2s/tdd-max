@@ -1,6 +1,9 @@
-const glob = require('glob');
+import glob from 'glob';
+import { SuiteCollection } from './SuiteCollection';
 
-class TestLoader {
+export class TestLoader {
+  suiteCollection: SuiteCollection;
+  Suite: ObjectConstructor;
   constructor(suiteCollection, Suite) {
     this.suiteCollection = suiteCollection;
     this.Suite = Suite;
@@ -20,5 +23,3 @@ class TestLoader {
     });
   }
 }
-
-module.exports = TestLoader;

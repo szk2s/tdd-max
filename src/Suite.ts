@@ -1,9 +1,11 @@
-const { SUITE } = require('./constants/class-names');
+import { SUITE } from './constants/class-names';
+import { BeforeEach } from './BeforeEach';
 
-class Suite extends Array {
+export class Suite extends Array {
+  type: string = SUITE;
+  beforeEach: BeforeEach | null = null;
   constructor() {
     super();
-    this.type = SUITE;
     this.beforeEach = null;
   }
   async run() {
@@ -15,5 +17,3 @@ class Suite extends Array {
     }
   }
 }
-
-module.exports = Suite;
