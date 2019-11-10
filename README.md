@@ -54,7 +54,7 @@ test(
   'add1' // Name of the patcher which you want to test
 );
 ```
-More example codes can be found at [help folder](https://github.com/spectral-lab/TDD-Max/tree/master/help)  
+More example codes can be found at [boilerplate folder](https://github.com/spectral-lab/TDD-Max/tree/master/boilerplate/test)  
 
 #### Notes
 - Test codes should be named as `*.test.js`.
