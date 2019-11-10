@@ -7,9 +7,12 @@
   "author": "szk2s <suzukisjss@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "format": "yarn prettier --write src/**/*.js index.js",
-    "lint": "yarn eslint .",
-    "lint:fix": "yarn eslint . --fix",
+    "lint": "eslint --ext .ts,.js .",
+    "lint:fix": "eslint --ext .ts,.js . --fix",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "prebuild": "npm run clean",
+    "clean": "rimraf dist/**/*.js",
     "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
   "dependencies": {
@@ -21,10 +24,13 @@
     "tdd-max": "bin/tdd-max.js"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
+    "@types/node": "^12.12.7",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "typescript": "^3.7.2"
   }
 }

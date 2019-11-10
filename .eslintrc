@@ -3,19 +3,24 @@
       "es6": true,
       "node": true
   },
-  "parser": "babel-eslint",
   "extends": [
       "eslint:recommended",
-      "plugin:prettier/recommended"
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:prettier/recommended",
+      "prettier/@typescript-eslint"
   ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-      "ecmaVersion": 2015
+      "ecmaVersion": 2019,
+      "sourceType": "module"
   },
   "plugins": [
-      "prettier"
+      "prettier",
+      "@typescript-eslint"
   ],
   "rules": {
       "no-console": "off",
+      "no-unused-vars": "warn",
       "prettier/prettier": "error"
   },
   "globals": {
