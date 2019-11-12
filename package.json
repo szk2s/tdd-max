@@ -14,7 +14,7 @@
     "build": "tsc",
     "build:watch": "tsc -w",
     "prebuild": "npm run clean",
-    "clean": "rimraf dist/**/*.js",
+    "clean": "rimraf dist && mkdir dist && touch dist/.gitkeep",
     "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
   "dependencies": {
