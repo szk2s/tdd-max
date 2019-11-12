@@ -1,6 +1,5 @@
 /***
  * For `node.scrpit` object
  */
-const maxAPI = require('max-api');
-const { main } = require('./dist/main');
-main(maxAPI);
+global.maxAPI = require('max-api');
+require('./dist/main');
