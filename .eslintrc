@@ -27,6 +27,7 @@
   "globals": {
       "test": "readonly",
       "beforeEach": "readonly",
-      "maxAPI": "readonly"
+      "maxAPI": "readonly",
+      "fetch": "readonly"
   }
 }
