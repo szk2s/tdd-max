@@ -1,11 +1,8 @@
 import JSONValue = Max.JSONValue;
 
-export class MaxAPIFacade {
-  maxAPI: Max.API;
-  constructor(maxAPI: Max.API) {
-    this.maxAPI = maxAPI;
-  }
-  request(
+// Do not export singleton class
+class MaxAPIFacade {
+  fetch(
     req: JSONValue,
     handler: string,
     reqName?: string,
@@ -20,17 +17,20 @@ export class MaxAPIFacade {
         console.log('timeout');
         reject(new Error(`Session timeout: ${reqName} cannot get ${handler}`));
       }, timeLimit);
-      this.maxAPI.addHandler(handler, (res: JSONValue) => {
+      maxAPI.addHandler(handler, (res: JSONValue) => {
         clearTimeout(timeout);
+        maxAPI.removeHandlers(handler);
         resolve(res);
       });
-      this.maxAPI.outlet(req);
+      maxAPI.outlet(req);
     });
   }
   async patcherDir() {
-    const res = await this.request('get_path', 'path');
+    const res = await this.fetch('get_path', 'path');
     if (typeof res !== 'string') throw new Error('Invalid response');
     const removeHDDName = (str: string) => str.split(':')[1];
     return removeHDDName(res);
   }
 }
+
+export const maxAPIFacade = new MaxAPIFacade();

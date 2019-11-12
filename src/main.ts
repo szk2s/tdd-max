@@ -1,13 +1,8 @@
-import { MaxAPIFacade } from './MaxAPIFacade';
-import { SuiteCollection } from './SuiteCollection';
-import { TestLoader } from './TestLoader';
-import { ConfigLoader } from './ConfigLoader';
+import { configLoader } from './ConfigLoader';
+import { suiteCollection } from './SuiteCollection';
+import { testLoader } from './TestLoader';
 
 export const main = async () => {
-  const maxAPIFacade = new MaxAPIFacade(maxAPI);
-  const configLoader = ConfigLoader(maxAPIFacade);
-  const suiteCollection = new SuiteCollection();
-  const testLoader = new TestLoader(suiteCollection);
   try {
     console.log('Starting');
     const config = await configLoader.run();

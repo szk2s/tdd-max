@@ -1,5 +1,5 @@
 import * as glob from 'glob';
-import { SuiteCollection } from './SuiteCollection';
+import { ISuiteCollection, suiteCollection } from './SuiteCollection';
 import { Suite } from './Suite';
 import * as fs from 'fs-extra';
 import { generateExecContext } from './execContext';
@@ -9,9 +9,10 @@ interface RequireTestFiles {
   testCodeDir: string;
 }
 
-export class TestLoader {
-  suiteCollection: SuiteCollection;
-  constructor(suiteCollection: SuiteCollection) {
+// Do not export singleton class
+class TestLoader {
+  suiteCollection: ISuiteCollection;
+  constructor(suiteCollection: ISuiteCollection) {
     this.suiteCollection = suiteCollection;
   }
   async execTestFiles({ testCodeDir }: RequireTestFiles) {
@@ -30,3 +31,5 @@ export class TestLoader {
     });
   }
 }
+
+export const testLoader = new TestLoader(suiteCollection);

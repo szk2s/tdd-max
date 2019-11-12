@@ -1,9 +1,10 @@
 import * as path from 'path';
 import * as glob from 'glob';
-import { MaxAPIFacade } from './MaxAPIFacade';
+import { maxAPIFacade } from './MaxAPIFacade';
 const DEFAULT_CONFIG = require('./constants/default-config');
 
-export const ConfigLoader = (maxAPIFacade: MaxAPIFacade) => {
+// Do not export singleton class
+const ConfigLoader = () => {
   const resolvePath = (config: TddMax.TODO_ANNOTATE, patcherDir: string) => {
     const ret = { ...config };
     if (config.testCodeDir) {
@@ -40,3 +41,5 @@ export const ConfigLoader = (maxAPIFacade: MaxAPIFacade) => {
     }
   };
 };
+
+export const configLoader = ConfigLoader();
