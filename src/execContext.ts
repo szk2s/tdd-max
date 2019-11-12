@@ -12,10 +12,10 @@ export const generateExecContext = (
   suiteCollection: ISuiteCollection
 ): execContext => ({
   test: (name, fn, target) => {
-    suiteCollection.head.push(new Test(maxAPI, { name, fn, target }));
+    suiteCollection.head.push(new Test({ name, fn, target }));
   },
   beforeEach: (name, fn, target) => {
-    suiteCollection.head.beforeEach = new BeforeEach(maxAPI, {
+    suiteCollection.head.beforeEach = new BeforeEach({
       name,
       fn,
       target

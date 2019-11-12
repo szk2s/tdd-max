@@ -6,7 +6,7 @@ export interface ISuiteCollection extends Array<Suite> {
 }
 
 // Do not export singleton class
-class SuiteCollection extends Array<Suite> implements ISuiteCollection {
+export class SuiteCollection extends Array<Suite> implements ISuiteCollection {
   get head() {
     if (!this.length) throw new Error('This collection has no suite');
     return this[this.length - 1];
