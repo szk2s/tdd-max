@@ -25,6 +25,7 @@
     "tdd-max": "bin/tdd-max.js"
   },
   "devDependencies": {
+    "@types/glob": "^7.1.1",
     "@types/node": "^12.12.7",
     "@typescript-eslint/eslint-plugin": "^2.6.1",
     "@typescript-eslint/parser": "^2.6.1",
