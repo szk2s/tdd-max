@@ -1,8 +1,15 @@
-export class SuiteCollection extends Array {
+import { Suite } from './Suite';
+
+export interface ISuiteCollection {
+  head: Suite;
+  run: CallableFunction;
+}
+export class SuiteCollection extends Array<Suite> implements ISuiteCollection {
   constructor() {
     super();
   }
   get head() {
+    if (!this.length) throw new Error('This collection has no suite');
     return this[this.length - 1];
   }
   async run() {

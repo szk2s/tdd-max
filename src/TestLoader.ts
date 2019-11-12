@@ -1,14 +1,17 @@
-import glob from 'glob';
+import * as glob from 'glob';
 import { SuiteCollection } from './SuiteCollection';
+import { Suite } from './Suite';
+
+interface RequireTestFiles {
+  testCodeDir: string;
+}
 
 export class TestLoader {
   suiteCollection: SuiteCollection;
-  Suite: ObjectConstructor;
-  constructor(suiteCollection, Suite) {
+  constructor(suiteCollection: SuiteCollection) {
     this.suiteCollection = suiteCollection;
-    this.Suite = Suite;
   }
-  async requireTestFiles({ testCodeDir }) {
+  async requireTestFiles({ testCodeDir }: RequireTestFiles) {
     const files = glob.sync('{,!(node_modules)/**/}*.js', {
       cwd: testCodeDir,
       absolute: true
@@ -18,7 +21,7 @@ export class TestLoader {
     }
     console.log('Loading:', files.length, 'files');
     files.forEach((file) => {
-      this.suiteCollection.push(new this.Suite());
+      this.suiteCollection.push(new Suite());
       require(file);
     });
   }

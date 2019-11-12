@@ -1,11 +1,11 @@
 export class MaxAPIFacade {
-  maxAPI: any;
-  constructor(maxAPI) {
+  maxAPI: Max.API;
+  constructor(maxAPI: Max.API) {
     this.maxAPI = maxAPI;
   }
   patcherDir() {
-    return new Promise((resolve, reject) => {
-      this.maxAPI.addHandler('path', (patcherPath) => {
+    return new Promise<string>((resolve, reject) => {
+      this.maxAPI.addHandler('path', (patcherPath: string) => {
         resolve(patcherPath.split(':')[1]);
       });
       this.maxAPI.outlet('get_path');

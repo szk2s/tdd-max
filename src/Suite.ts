@@ -1,12 +1,10 @@
-import { SUITE } from './constants/class-names';
 import { BeforeEach } from './BeforeEach';
+import { ITest } from './Test';
 
-export class Suite extends Array {
-  type: string = SUITE;
-  beforeEach: BeforeEach | null = null;
+export class Suite extends Array<ITest> {
+  beforeEach?: BeforeEach;
   constructor() {
     super();
-    this.beforeEach = null;
   }
   async run() {
     console.log('Running: new Test Suite');

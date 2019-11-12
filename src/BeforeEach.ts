@@ -3,7 +3,7 @@ import { Test } from './Test';
 
 export class BeforeEach extends Test {
   type: string = BEFORE_EACH;
-  constructor(maxAPI, { name, target, fn }) {
-    super(maxAPI, { name, fn, target });
+  constructor(maxAPI: Max.API, { name, target, fn }: TddMax.testArgs) {
+    super(maxAPI, { name, target, fn });
   }
 }
