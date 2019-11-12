@@ -7,6 +7,7 @@
   "author": "szk2s <suzukisjss@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "test": "jest --watch",
     "lint": "eslint --ext .ts,.js .",
     "lint:fix": "eslint --ext .ts,.js . --fix",
     "lint:watch": "esw -w --color --ext .ts,.js . | less",
@@ -19,7 +20,8 @@
   "dependencies": {
     "chai": "^4.2.0",
     "fs-extra": "^8.1.0",
-    "glob": "^7.1.5"
+    "glob": "^7.1.5",
+    "ts-jest": "^24.1.0"
   },
   "bin": {
     "tdd-max": "bin/tdd-max.js"
@@ -27,6 +29,7 @@
   "devDependencies": {
     "@types/fs-extra": "^8.0.1",
     "@types/glob": "^7.1.1",
+    "@types/jest": "^24.0.22",
     "@types/node": "^12.12.7",
     "@typescript-eslint/eslint-plugin": "^2.6.1",
     "@typescript-eslint/parser": "^2.6.1",
@@ -34,6 +37,7 @@
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-watch": "^6.0.1",
+    "jest": "^24.9.0",
     "prettier": "^1.18.2",
     "typescript": "^3.7.2"
   }
