@@ -3,9 +3,6 @@ import { ITest } from './Test';
 
 export class Suite extends Array<ITest> {
   beforeEach?: BeforeEach;
-  constructor() {
-    super();
-  }
   async run() {
     console.log('Running: new Test Suite');
     for (let i = 0; i < this.length; i++) {
