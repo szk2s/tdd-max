@@ -9,6 +9,7 @@
   "scripts": {
     "lint": "eslint --ext .ts,.js .",
     "lint:fix": "eslint --ext .ts,.js . --fix",
+    "lint:watch": "esw -w --color --ext .ts,.js . | less",
     "build": "tsc",
     "build:watch": "tsc -w",
     "prebuild": "npm run clean",
@@ -30,6 +31,7 @@
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-prettier": "^3.1.1",
+    "eslint-watch": "^6.0.1",
     "prettier": "^1.18.2",
     "typescript": "^3.7.2"
   }
