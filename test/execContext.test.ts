@@ -1,8 +1,8 @@
 import { generateExecContext } from '../src/execContext';
-import { SuiteCollection } from '../src/SuiteCollection';
 
 test('generates execContext', () => {
-  const execContext = generateExecContext(new SuiteCollection());
+  const mockCollection: any = [];
+  const execContext = generateExecContext(mockCollection);
   expect(execContext).toHaveProperty('test');
   expect(execContext).toHaveProperty('beforeEach');
 });
