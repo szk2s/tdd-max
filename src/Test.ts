@@ -9,27 +9,49 @@ export class Test implements ITest {
   constructor(testArgs: TddMax.testArgs) {
     this.testArgs = testArgs;
   }
+  get fn() {
+    return this.testArgs.fn;
+  }
   public async run() {
-    this.testArgs.fn.constructor.name === 'GeneratorFunction'
-      ? await this.runGeneratorFn()
-      : this.testArgs.fn();
+    try {
+      this.fn.constructor.name === 'GeneratorFunction'
+        ? await this.runGeneratorFn()
+        : await this.runFn();
+      console.log('Passed: ', this.testArgs.name);
+    } catch (e) {
+      console.error('Failed:', this.testArgs.name);
+      console.error(e);
+    }
+  }
+  async runFn() {
+    if (this.fn.length === 0) return this.fn();
+    await this.runFnWithDone();
+  }
+  runFnWithDone() {
+    return new Promise((resolve, reject) => {
+      const timeout = setTimeout(() => {
+        reject(new Error('Failed: timeout'));
+      }, 1000);
+      const done = () => {
+        clearTimeout(timeout);
+        resolve();
+      };
+      this.fn(done);
+    });
   }
   // TODO: refactor this
   runGeneratorFn() {
-    return new Promise((resolve) => {
-      const gen: Generator = this.testArgs.fn();
+    return new Promise((resolve, reject) => {
+      const gen: Generator = this.fn();
       maxAPI.addHandler(this.testArgs.target, (actual) => {
         let done;
         try {
           done = gen.next(actual).done;
-        } catch (err) {
-          console.error('Failed:', this.testArgs.name);
-          console.error(err);
+        } catch (e) {
           maxAPI.removeHandlers(this.testArgs.target);
-          resolve();
+          reject(e);
         } finally {
           if (done) {
-            console.log('Passed: ', this.testArgs.name);
             maxAPI.removeHandlers(this.testArgs.target);
             resolve();
           }
