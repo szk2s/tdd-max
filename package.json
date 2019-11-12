@@ -7,24 +7,38 @@
   "author": "szk2s <suzukisjss@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "format": "yarn prettier --write src/**/*.js index.js",
-    "lint": "yarn eslint .",
-    "lint:fix": "yarn eslint . --fix",
+    "test": "jest --watch",
+    "lint": "eslint --ext .ts,.js .",
+    "lint:fix": "eslint --ext .ts,.js . --fix",
+    "lint:watch": "esw -w --color --ext .ts,.js . | less",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "prebuild": "npm run clean",
+    "clean": "rimraf dist && mkdir dist && touch dist/.gitkeep",
     "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
   "dependencies": {
     "chai": "^4.2.0",
     "fs-extra": "^8.1.0",
-    "glob": "^7.1.5"
+    "glob": "^7.1.5",
+    "ts-jest": "^24.1.0"
   },
   "bin": {
     "tdd-max": "bin/tdd-max.js"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
+    "@types/fs-extra": "^8.0.1",
+    "@types/glob": "^7.1.1",
+    "@types/jest": "^24.0.22",
+    "@types/node": "^12.12.7",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "prettier": "^1.18.2"
+    "eslint-watch": "^6.0.1",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "typescript": "^3.7.2"
   }
 }

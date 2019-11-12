@@ -1,11 +1,8 @@
-const { SUITE } = require('./constants/class-names');
+import { BeforeEach } from './BeforeEach';
+import { ITest } from './Test';
 
-class Suite extends Array {
-  constructor() {
-    super();
-    this.type = SUITE;
-    this.beforeEach = null;
-  }
+export class Suite extends Array<ITest> {
+  beforeEach?: BeforeEach;
   async run() {
     console.log('Running: new Test Suite');
     for (let i = 0; i < this.length; i++) {
@@ -15,5 +12,3 @@ class Suite extends Array {
     }
   }
 }
-
-module.exports = Suite;
