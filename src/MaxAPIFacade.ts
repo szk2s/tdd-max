@@ -1,7 +1,18 @@
 import JSONValue = Max.JSONValue;
 
-// Do not export singleton class
-class MaxAPIFacade {
+export type fetch = (
+  req: JSONValue,
+  handler: string,
+  reqName?: string,
+  timeLimit?: ms
+) => Promise<JSONValue>;
+
+export interface IMaxAPIFacade {
+  fetch: fetch;
+  patcherDir: () => Promise<string>;
+}
+
+export class MaxAPIFacade implements IMaxAPIFacade {
   fetch(
     req: JSONValue,
     handler: string,
