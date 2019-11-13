@@ -1,6 +1,6 @@
 {
   "name": "tdd-max",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "Utility library which help Test Driven development in Cycling '74 Max",
   "main": "index.js",
   "repository": "https://github.com/spectral-lab/TDD-Max",
@@ -15,16 +15,17 @@
     "build:watch": "tsc -w",
     "prebuild": "npm run clean",
     "clean": "rimraf dist && mkdir dist && touch dist/.gitkeep",
+    "prepublish": "npm run build",
     "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
+  },
+  "bin": {
+    "tdd-max": "bin/tdd-max.js"
   },
   "dependencies": {
     "chai": "^4.2.0",
     "fs-extra": "^8.1.0",
     "glob": "^7.1.5",
     "ts-jest": "^24.1.0"
-  },
-  "bin": {
-    "tdd-max": "bin/tdd-max.js"
   },
   "devDependencies": {
     "@types/fs-extra": "^8.0.1",
