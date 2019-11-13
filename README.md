@@ -48,7 +48,7 @@ test('adds 1 to input number', async () => {
   expect(await fetch(TARGET, { add1: -2.1 })).to.equal(-1.1);
 });
 ```
-More example codes can be found at [boilerplate folder](https://github.com/spectral-lab/TDD-Max/tree/master/boilerplate/test)  
+For more detailed guide, read the [Getting Started](https://github.com/spectral-lab/TDD-Max/tree/master/docs/getting-started.md)
 
 #### Notes
 - Test codes should be named as `*.test.js`.
