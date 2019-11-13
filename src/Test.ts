@@ -39,8 +39,9 @@ export class Test implements ITest {
       this.fn(done);
     });
   }
-  // TODO: refactor this
+  // Deprecated: support for generator function will be removed in v4.0.0
   runGeneratorFn() {
+    console.error('Deprecated: support for generator function will be removed in v4.0.0');
     return new Promise((resolve, reject) => {
       const gen: Generator = this.fn();
       maxAPI.addHandler(this.testArgs.target, (actual) => {
